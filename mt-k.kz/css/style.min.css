@@ -62,7 +62,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Rubik";
+  font-family: "Montserrat";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -71,7 +71,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Rubik";
+  font-family: "Montserrat";
   font-size: inherit;
 }
 
@@ -135,6 +135,7 @@ body._lock {
   display: flex;
   flex-direction: column;
 }
+
 ._container {
   max-width: 1160px;
   margin: 0 auto;
@@ -775,6 +776,48 @@ body.ie ._ibg img {
   cursor: pointer;
   z-index: 30;
   background: url("../img/icons/close.svg") 0 0 no-repeat;
+}
+
+.header {
+  padding: 20px 0;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__link {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #363636;
+  transition: 0.3s;
+}
+.menu__link:not(last-child) {
+  margin-right: 23px;
+}
+.menu__link:hover {
+  color: #555;
+}
+.menu__link:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #555;
+  transition: width 0.4s ease 0s;
+}
+.menu__link:hover::after {
+  width: 100%;
 }
 
 /*

@@ -1,4 +1,78 @@
 //====================================================================================================
+.header {
+	padding: 20px 0;
+}
+
+.header__body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {}
+
+.header__menu {}
+
+.menu {}
+
+.menu__icon {}
+
+.icon-menu {}
+
+.menu__body {}
+
+.menu__list {
+	display: flex;
+
+}
+
+.menu__link {
+	position: relative;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #363636;
+	transition: 0.3s;
+
+	&:not(last-child) {
+		margin-right: 23px;
+	}
+
+	&:hover {
+		color: #555;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: #555;
+		transition: width 0.4s ease 0s;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+
+
+
+
+.menu__link .btn {}
+
+.button__border {}
+
+.header__social {}
+
+.header__tel {}
+
+.header__icon {}
+
+.icon__header {}
 
 //====================================================================================================
 

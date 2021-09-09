@@ -41,6 +41,25 @@
 	}
 }
 
+.btn__green {
+	background-color: $green;
+	color: $white;
+	filter: drop-shadow(0px 4px 15px rgba(43, 57, 130, 0.25));
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 15px 25px;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $greenHover;
+			color: $white;
+		}
+	}
+
+}
+
 //</BUTTONS>====================================================================================================
 
 //<SELECT (sel+tab)>====================================================================================================

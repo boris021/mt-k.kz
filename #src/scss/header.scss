@@ -48,7 +48,7 @@
 
 .header__tel {
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 140%;
 	color: $black;
 	transition: color 0.3s ease 0s;
@@ -67,7 +67,7 @@
 	}
 }
 
-.header__mob {
+.header__mob a {
 	display: none;
 
 	@media (max-width:$md4+px) {
@@ -76,7 +76,6 @@
 		font-size: 20px;
 		color: $black;
 		transition: color 0.3s ease 0s;
-		text-align: right;
 	}
 }
 
@@ -92,16 +91,47 @@
 }
 
 .menu__link {
+	position: relative;
+	font-weight: 500;
+	line-height: 18px;
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
 	color: #000;
 	font-size: 16px;
 
 	@media (max-width:$md3+px) {
 		color: #fff;
+		font-size: 24px;
 	}
 }
 
+.menu__link:after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #000;
+	transition: width 0.3s ease 0s;
+
+	@media (max-width:$md4+px) {
+		background-color: #fff;
+
+	}
+}
+
+.menu__link:hover::after,
+.menu__link:focus::after {
+	width: 100%;
+}
+
 .menu__link:hover {
-	text-decoration: underline;
+	color: #333;
+
+	@media (max-width:$md4+px) {
+		color: #efefef;
+	}
 }
 
 /* ----------------------- */
@@ -207,9 +237,5 @@
 
 	.menu__list>li._active {
 		display: block;
-	}
-
-	.menu__link {
-		font-size: 24px;
 	}
 }

@@ -107,6 +107,134 @@ body {
 	flex: 1 1 auto;
 }
 
+.page__main {
+	margin: 150px 0 75px 0;
+
+	@media (max-width:$md2+px) {
+		margin-top: 50px;
+	}
+
+	@media (max-width:$md4+px) {
+		margin-top: 40px;
+	}
+}
+
 //===================================================================================================================================
+.page {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__block {
+		padding-top: 110px;
+		width: 55%;
+		z-index: 2;
+
+		@media (max-width:1180px) {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 60px;
+		color: #303030;
+		margin-bottom: 28px;
+
+		@media (max-width:$md2+px) {
+			font-size: 50px;
+		}
+
+		@media (max-width:$md3+px) {
+			font-size: 45px;
+		}
+
+		@media (max-width:$md4+px) {
+			font-size: 30px;
+			line-height: 120%;
+			margin-bottom: 18px;
+		}
+	}
+
+	&__line {
+		height: 4px;
+		width: 30%;
+		background: $green;
+		margin-bottom: 28px;
+
+		@media (max-width:$md4+px) {
+			margin-bottom: 18px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 124%;
+		margin-bottom: 28px;
+
+		@media (max-width:$md4+px) {
+			font-size: 16px;
+			margin-bottom: 18px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		&-one,
+		.two {
+			@media (max-width:$md3+px) {
+				display: flex;
+				flex: 0 1 auto;
+			}
+		}
+
+		&-one {
+			@media (max-width:$md4+px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__text-btn {
+		font-weight: 600;
+		font-size: 16px;
+		color: $black;
+		transition: color 0.3s ease 0s;
+
+		&:hover {
+			color: $grey;
+		}
+	}
+}
+
+.green__btn {
+	margin: 0 30px 0px 0;
+
+	@media (max-width:$md4+px) {
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+
+.main__page-img {
+	position: absolute;
+	top: 65px;
+	right: 0;
+	z-index: -1;
+
+	@media (max-width:$md2+px) {
+		display: none;
+		z-index: 1;
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

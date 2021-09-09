@@ -181,6 +181,23 @@ body._lock {
   filter: drop-shadow(0px 4px 15px rgba(43, 57, 130, 0.25));
 }
 
+.btn__green {
+  background-color: #00C041;
+  color: #fff;
+  filter: drop-shadow(0px 4px 15px rgba(43, 57, 130, 0.25));
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 25px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .btn__green:hover {
+    background-color: #5BB025;
+    color: #fff;
+  }
+}
+
 .select {
   position: relative;
 }
@@ -502,6 +519,10 @@ textarea.input {
   font-size: 12px;
   width: 100%;
   text-align: center;
+}
+
+.text-color {
+  color: #00C041;
 }
 
 .row:after {
@@ -843,7 +864,7 @@ body.ie ._ibg img {
 
 .header__tel {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 140%;
   color: #000;
   transition: color 0.3s ease 0s;
@@ -863,17 +884,16 @@ body.ie ._ibg img {
   }
 }
 
-.header__mob {
+.header__mob a {
   display: none;
 }
 @media (max-width: 479.98px) {
-  .header__mob {
+  .header__mob a {
     display: block;
     font-weight: bold;
     font-size: 20px;
     color: #000;
     transition: color 0.3s ease 0s;
-    text-align: right;
   }
 }
 
@@ -887,17 +907,49 @@ body.ie ._ibg img {
 }
 
 .menu__link {
+  position: relative;
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
   color: #000;
   font-size: 16px;
 }
 @media (max-width: 767.98px) {
   .menu__link {
     color: #fff;
+    font-size: 24px;
   }
 }
 
+.menu__link:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease 0s;
+}
+@media (max-width: 479.98px) {
+  .menu__link:after {
+    background-color: #fff;
+  }
+}
+
+.menu__link:hover::after,
+.menu__link:focus::after {
+  width: 100%;
+}
+
 .menu__link:hover {
-  text-decoration: underline;
+  color: #333;
+}
+@media (max-width: 479.98px) {
+  .menu__link:hover {
+    color: #efefef;
+  }
 }
 
 /* ----------------------- */
@@ -1003,11 +1055,136 @@ body.ie ._ibg img {
   .menu__list > li._active {
     display: block;
   }
-
-  .menu__link {
-    font-size: 24px;
-  }
 }
 .page {
   flex: 1 1 auto;
+}
+
+.page__main {
+  margin: 150px 0 75px 0;
+}
+@media (max-width: 991.98px) {
+  .page__main {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 479.98px) {
+  .page__main {
+    margin-top: 40px;
+  }
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page__block {
+  padding-top: 110px;
+  width: 55%;
+  z-index: 2;
+}
+@media (max-width: 1180px) {
+  .page__block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.page__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: #303030;
+  margin-bottom: 28px;
+}
+@media (max-width: 991.98px) {
+  .page__title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page__title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 479.98px) {
+  .page__title {
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 18px;
+  }
+}
+.page__line {
+  height: 4px;
+  width: 30%;
+  background: #00C041;
+  margin-bottom: 28px;
+}
+@media (max-width: 479.98px) {
+  .page__line {
+    margin-bottom: 18px;
+  }
+}
+.page__subtitle {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 124%;
+  margin-bottom: 28px;
+}
+@media (max-width: 479.98px) {
+  .page__subtitle {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+}
+.page__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .page__buttons-one,
+.page__buttons .two {
+    display: flex;
+    flex: 0 1 auto;
+  }
+}
+@media (max-width: 479.98px) {
+  .page__buttons-one {
+    margin-bottom: 20px;
+  }
+}
+.page__text-btn {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  transition: color 0.3s ease 0s;
+}
+.page__text-btn:hover {
+  color: #333333;
+}
+
+.green__btn {
+  margin: 0 30px 0px 0;
+}
+@media (max-width: 479.98px) {
+  .green__btn {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.main__page-img {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  z-index: -1;
+}
+@media (max-width: 991.98px) {
+  .main__page-img {
+    display: none;
+    z-index: 1;
+  }
 }

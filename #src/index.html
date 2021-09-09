@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
+@@include('_head.html',{
+"title":"Главная"
+})
 
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page__main main__page">
+			<div class="page__container _container">
+				<div class="page__block">
+					<h1 class="page__title"><span class="text-color">Металлопрокат <br></span>
+						от производителя</h1>
+					<div class="page__line"></div>
+					<div class="page__subtitle">Оставьте заявку прямо сейчас <br>
+						и мы привезем трубы в день заказа</div>
+					<div class="page__buttons">
+						<div class="page__buttons-one"><a href="#" class="button btn__green green__btn">Привезти трубы
+								сегодня</a></div>
+						<div class="page__buttons-two><a href=" #" class="page__text-btn">или скачать каталог</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="main__page-img">
+				<img src="img/image-3-1.png" alt="" class="page__img-bg _ibg">
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
 </html>

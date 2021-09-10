@@ -201,6 +201,7 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		margin-bottom: 75px;
 
 		&-one {
 			margin-right: 20px;
@@ -212,11 +213,11 @@ body {
 			@media (max-width:$md4+px) {
 				margin-right: 0;
 				min-width: 100%;
+				justify-content: center;
 			}
 		}
 
-		&-one,
-		.two {
+		&-two {
 			@media (max-width:$md3+px) {
 				display: flex;
 				flex: 0 0 100%;
@@ -233,7 +234,62 @@ body {
 		&:hover {
 			color: $grey;
 		}
+
+		@media (max-width:$md4+px) {
+			justify-content: center;
+		}
 	}
 }
 
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//advantage========================================================================================================================================================
+.advantage {
+	margin-bottom: 81px;
+}
+
+.advantage__body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.advantage__item {
+	position: relative;
+	background: #447DFF;
+	padding: 24px 24px 81px 24px;
+	min-width: 285px;
+	flex: 0 0 25%;
+	transition: opacity 0.3s ease 0s;
+
+	@media (max-width:$md2+px) {
+		flex: 0 0 50%;
+	}
+
+	@media (max-width:$md3+px) {
+		flex: 0 0 100%;
+	}
+
+	&:hover {
+		opacity: 0.95;
+	}
+}
+
+.advantage__title {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: $white;
+}
+
+.advantage__img {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+.advantage__item-two {
+	background: #1666D7;
+}

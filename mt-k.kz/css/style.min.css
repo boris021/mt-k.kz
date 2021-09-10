@@ -1158,6 +1158,7 @@ body.ie ._ibg img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 75px;
 }
 .main__buttons-one {
   margin-right: 20px;
@@ -1171,11 +1172,11 @@ body.ie ._ibg img {
   .main__buttons-one {
     margin-right: 0;
     min-width: 100%;
+    justify-content: center;
   }
 }
 @media (max-width: 767.98px) {
-  .main__buttons-one,
-.main__buttons .two {
+  .main__buttons-two {
     display: flex;
     flex: 0 0 100%;
   }
@@ -1188,4 +1189,59 @@ body.ie ._ibg img {
 }
 .main__text-btn:hover {
   color: #333333;
+}
+@media (max-width: 479.98px) {
+  .main__text-btn {
+    justify-content: center;
+  }
+}
+
+.advantage {
+  margin-bottom: 81px;
+}
+
+.advantage__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advantage__item {
+  position: relative;
+  background: #447DFF;
+  padding: 24px 24px 81px 24px;
+  min-width: 285px;
+  flex: 0 0 25%;
+  transition: opacity 0.3s ease 0s;
+}
+@media (max-width: 991.98px) {
+  .advantage__item {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  .advantage__item {
+    flex: 0 0 100%;
+  }
+}
+.advantage__item:hover {
+  opacity: 0.95;
+}
+
+.advantage__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+.advantage__img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.advantage__item-two {
+  background: #1666D7;
 }

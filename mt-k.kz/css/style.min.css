@@ -1330,14 +1330,33 @@ body.ie ._ibg img {
 .call {
   margin: 80px 67px;
 }
+@media (max-width: 767.98px) {
+  .call {
+    margin: 60px 0px;
+  }
+}
 
 .call__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 50px;
   background: #E8EDF1;
 }
+@media (max-width: 767.98px) {
+  .call__body {
+    padding: 30px;
+  }
+}
 
 .call__wrapper {
+  position: relative;
   width: 60%;
+}
+@media (max-width: 1176px) {
+  .call__wrapper {
+    width: 100%;
+  }
 }
 
 .call__title {
@@ -1346,4 +1365,68 @@ body.ie ._ibg img {
   line-height: 128.9%;
   color: #000;
   margin-bottom: 19px;
+}
+
+.call__subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 128.9%;
+  color: #333333;
+  margin: 0px 0px 37px 0px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 17px;
+  color: #666666;
+  padding: 11px 13px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  max-width: 167px;
+  outline: none;
+}
+@media (max-width: 991.98px) {
+  .input {
+    margin-bottom: 17px;
+  }
+}
+
+.input:not(:last-child) {
+  margin-right: 17px;
+}
+
+.input:focus {
+  box-shadow: 0px 0px 30px rgba(0, 62, 134, 0.15);
+}
+
+.btn__submit {
+  background: #FF5C1B;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  padding: 13px 28px;
+  transition: all 0.3s ease 0s;
+}
+.btn__submit:hover {
+  background-color: #f84700;
+}
+
+.call__img {
+  background-size: cover;
+  max-width: 344px;
+}
+@media (max-width: 1176px) {
+  .call__img {
+    display: none;
+  }
 }

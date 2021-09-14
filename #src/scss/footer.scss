@@ -1,5 +1,22 @@
 footer {
+	background: #1C3B87;
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+.footer__text {
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #FFFFFF;
+
+	& a {
+		color: #efefef;
+	}
+}
+
 //====================================================================================================
 
 //====================================================================================================
